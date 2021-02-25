@@ -1,0 +1,136 @@
+@media (max-width: 768px) {
+  #navbarResponsive {
+    background: #343a40!important;
+  }
+}
+
+@media (max-width: 768px) {
+  #mainNav {
+    background: #343a40!important;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-left: 10px;
+    margin-top: 10px;
+    transition: padding-top .3s,padding-bottom .3s;
+    border: none;
+    background-color: transparent;
+    width: 745px;
+    height: 60px;
+    border-radius: 25px;
+  }
+}
+
+@media (max-width: 576px) {
+  #mainNav {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-left: 10px;
+    margin-top: 10px;
+    transition: padding-top .3s,padding-bottom .3s;
+    border: none;
+    background-color: transparent;
+    width: 550px;
+    height: 60px;
+    border-radius: 25px;
+  }
+}
+
+@media (max-width: 576px) {
+  #ilustrasi {
+    vertical-align: middle;
+    width: 365px;
+  }
+}
+
+@media (max-width: 425px) {
+  #ilustrasi {
+    vertical-align: middle;
+    width: 365px;
+  }
+}
+
+@media (max-width: 375px) {
+  #ilustrasi {
+    vertical-align: middle;
+    width: 300px;
+  }
+}
+
+@media (max-width: 425px) {
+  #mainNav {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-left: 10px;
+    margin-top: 10px;
+    transition: padding-top .3s,padding-bottom .3s;
+    border: none;
+    background-color: transparent;
+    width: 405px;
+    height: 60px;
+    border-radius: 25px;
+  }
+}
+
+@media (max-width: 768px) {
+  #title-web {
+    font-size: 50px;
+  }
+}
+
+@media (max-width: 425px) {
+  #title-web {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 375px) {
+  #title-web {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 375px) {
+  #mainNav {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-left: 10px;
+    margin-top: 10px;
+    transition: padding-top .3s,padding-bottom .3s;
+    border: none;
+    background-color: transparent;
+    width: 355px;
+    height: 60px;
+    border-radius: 25px;
+  }
+}
+
+@media (max-width: 360px) {
+  #mainNav {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-left: 10px;
+    margin-top: 10px;
+    transition: padding-top .3s,padding-bottom .3s;
+    border: none;
+    background-color: transparent;
+    width: 335px;
+    height: 60px;
+    border-radius: 25px;
+  }
+}
+
+@media (max-width: 320px) {
+  #mainNav {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-left: 10px;
+    margin-top: 10px;
+    transition: padding-top .3s,padding-bottom .3s;
+    border: none;
+    background-color: transparent;
+    width: 300px;
+    height: 60px;
+    border-radius: 25px;
+  }
+}
+

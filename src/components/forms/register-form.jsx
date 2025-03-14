@@ -53,7 +53,7 @@ const RegisterForm = () => {
         </div>
         <div className="signin">
           <Link href="/login">
-            <a>Sign in now</a>
+            Sign in now
           </Link>
         </div>
       </div>

@@ -8,9 +8,9 @@ const social_links=[
 ]
 
 const hero_socials = [
-  { num: 1,link:'http://facebook.com',target: '_blank', icon: 'fab fa-facebook-f social-icon-1', title: 'Facebook' },
-  { num: 3,link:'https://www.youtube.com/',target: '_blank',icon: 'fab fa-youtube social-icon-3', title: 'Youtube' },
-  { num: 2,link:'http://twitter.com',target: '_blank',icon:'fab fa-twitter social-icon-2', title: 'Twitter' },
+  { num: 1, link:'http://facebook.com', target: '_blank', icon: 'fab fa-facebook-f social-icon-1', title: 'Facebook' },
+  { num: 3, link:'https://www.youtube.com/', target: '_blank', icon: 'fab fa-youtube social-icon-3', title: 'Youtube' },
+  { num: 2, link:'http://twitter.com', target: '_blank', icon:'fab fa-twitter social-icon-2', title: 'Twitter' },
 ]
 
 export const HeroSocials = ({hide_title=false}) => {
@@ -23,7 +23,8 @@ export const HeroSocials = ({hide_title=false}) => {
 const SocialLinks = () => {
   return (
     <>{social_links.map((l, i) => <a key={i} href={l.link}
-    target={l.target ? l.target:''}><i className={l.icon}></i></a>)}</>
+    target={l.target ? l.target:''}><i className={l.icon}></i></a>)}
+    </>
   );
 };
 

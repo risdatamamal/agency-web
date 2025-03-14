@@ -14,7 +14,7 @@ const SingleServiceFour = ({ service, index, m }) => {
         <div className="tp-services-item__content">
           <h3 className="tp-sv-title">
             <Link href={`/service-details/${id}`}>
-              <a>{title}</a>
+              {title}
             </Link>
           </h3>
           <p>{text_1}</p>

@@ -49,7 +49,7 @@ const JobArea = () => {
                   <div className="jobitem__title">
                     <h4 className="job-title-sm">
                       <Link href={`/job-details/${id}`}>
-                        <a>{title}</a>
+                        {title}
                       </Link>
                     </h4>
                   </div>

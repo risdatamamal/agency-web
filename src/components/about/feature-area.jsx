@@ -9,7 +9,7 @@ function FeatureItem({ title, subtitle, color }) {
         <div className="acfeature__item">
           <h3 className="ac-feature-sm-title">
             <Link href="/about-me">
-              <a>{title}</a>
+              {title}
             </Link>
           </h3>
           <p>{subtitle}</p>

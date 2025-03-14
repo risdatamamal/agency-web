@@ -1,5 +1,6 @@
 import React from 'react';
 import LoginForm from '../forms/login-form';
+import Image from 'next/image';
 
 const LoginArea = () => {
   return (
@@ -9,7 +10,7 @@ const LoginArea = () => {
           <div className="row gx-0">
             <div className="col-xl-6 col-lg-6 col-12">
               <div className="tp-login-thumb login-space sky-bg d-flex justify-content-center h-100">
-                <img className='h-100' src="/assets/img/contact/login.png" alt="" />
+                <Image className='h-100' src="/assets/img/contact/login.png" alt="Login Image" width={387} height={100} />
               </div>
             </div>
             <div className="col-xl-6 col-lg-6 col-12">

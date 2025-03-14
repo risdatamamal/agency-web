@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { FooterThree, HeaderSix, Wrapper } from '../../layout';
+import { Footer, Header, Wrapper } from '../../layout';
 import { animationCreate } from '../../utils/utils';
 import Breadcrumb from '../common/breadcrumb/breadcrumb';
 import Cta from '../common/cta/cta';
@@ -14,11 +14,11 @@ const Job = () => {
   }, []);
   return (
     <Wrapper>
-      <HeaderSix />
+      <Header />
       <Breadcrumb title={'Collax Job List'} />
       <JobArea/>
       <Cta/>
-      <FooterThree />
+      <Footer />
     </Wrapper>
   );
 };

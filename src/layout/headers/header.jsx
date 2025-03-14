@@ -1,29 +1,48 @@
-import React from 'react';
-import Link from 'next/link';
-import useSticky from '../../hooks/use-sticky';
-import Sidebar from '../../components/common/off-canvas';
-import NavMenus from './nav-menus';
-import MobileMenu from './mobile-menu';
+import Link from "next/link";
+import React from "react";
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import useFirebase from "../../hooks/use-firebase";
+import useSticky from "../../hooks/use-sticky";
+import { get_user } from "../../redux/features/auth-slice";
+import Languages from "./component/languages";
+import MobileMenu from "./mobile-menu";
+import NavMenus from "./nav-menus";
+import Image from "next/image";
 
 const Header = () => {
+  // headerSticky
   const { headerSticky } = useSticky();
-  const [sidebarOpen, setSidebarOpen] = React.useState(false);
+  // user
+  const { user } = useSelector((state) => state.auth);
+  // firebase logout
+  const { logout } = useFirebase();
+  // dispatch
+  const dispatch = useDispatch();
+  // get_user
+  useEffect(() => {
+    dispatch(get_user());
+  }, [dispatch]);
   return (
     <React.Fragment>
       <header className="d-none d-lg-block">
-        <div id="header-sticky" className={`tp-header-area header-transparent pl-165 pr-165 pt-35 
-        ${headerSticky ? 'header-sticky' : ''}`}>
+        <div
+          id="header-sticky"
+          className={`tp-header-area-two tp-header-bg header-transparent header-transparent-two ${
+            headerSticky ? "header-sticky" : ""
+          }`}
+        >
           <div className="container-fluid">
             <div className="row align-items-center">
-              <div className="col-xl-3 col-lg-3">
-                <div className="tp-logo">
+              <div className="col-xxl-3 col-xl-3 col-lg-3">
+                <div className="tp-logo text-start">
                   <Link href="/">
-                    <a><img src="/assets/img/logo/logo-blue.png" alt="" /></a>
+                    <Image src="/assets/img/logo/logo-blue.png" alt="Logo" width={180} height={60} />
                   </Link>
                 </div>
               </div>
-              <div className="col-xl-7 col-lg-7">
-                <div className="tp-main-menu">
+              <div className="col-xxl-5 col-xl-6 col-lg-6">
+                <div className="tp-main-menu tp-menu-black tp-bs-menu tp-bp-menu text-center">
                   <nav id="mobile-menu">
                     {/* nav menus start */}
                     <NavMenus />
@@ -31,9 +50,37 @@ const Header = () => {
                   </nav>
                 </div>
               </div>
-              <div className="col-xl-2 col-lg-2">
-                <div className="tp-menu-bar text-end" onClick={() => setSidebarOpen(true)}>
-                  <button><i className="fal fa-bars"></i></button>
+              <div className="col-xxl-4 col-xl-3 col-lg-3">
+                <div className="tp-header-left d-flex align-items-center justify-content-end ">
+                  {/* <ul className="d-none d-xxl-block">
+                    {!user?.email && (
+                      <li>
+                        <Link href="/system/auth/login">
+                          <i className="far fa-user fa-user"></i> Login
+                        </Link>
+                      </li>
+                    )}
+                    {user?.email && (
+                      <li>
+                        <button onClick={logout} style={{ cursor: "pointer" }}>
+                          <a>
+                            <i className="far fa-user fa-user"></i>Logout
+                          </a>
+                        </button>
+                      </li>
+                    )}
+                    <li>
+                      <a href="#">
+                        EN<i className="fal fa-arrow-down arrow-down"></i>
+                      </a>
+                      <Languages />
+                    </li>
+                  </ul> */}
+                  <div className="tp-header-yellow-button">
+                    <Link href="/about" legacyBehavior>
+                      <a className="tp-btn-white">How it Works</a>
+                    </Link>
+                  </div>
                 </div>
               </div>
             </div>
@@ -42,12 +89,8 @@ const Header = () => {
       </header>
 
       {/* <!-- mobile-menu-area --> */}
-      <MobileMenu logo={"logo.png"} />
+      <MobileMenu logo={"logo-blue.png"} transparent={false} />
       {/* <!-- mobile-menu-area-end --> */}
-
-      {/* off canvas start */}
-      <Sidebar isOpen={sidebarOpen} setIsOpen={setSidebarOpen} />
-      {/* off canvas end */}
     </React.Fragment>
   );
 };

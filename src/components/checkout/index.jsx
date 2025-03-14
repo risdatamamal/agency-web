@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-import { FooterThree, HeaderSix, Wrapper } from '../../layout';
+import { Footer, Header, Wrapper } from '../../layout';
 import { get_cart_products } from '../../redux/features/cart-slice';
 import { animationCreate } from '../../utils/utils';
 import Breadcrumb from '../common/breadcrumb/breadcrumb';
@@ -22,11 +22,11 @@ const Checkout = () => {
 
   return (
     <Wrapper>
-      <HeaderSix />
+      <Header />
       <Breadcrumb title={'Checkout'} />
       <CouponArea/>
       <CheckoutArea/>
-      <FooterThree />
+      <Footer />
     </Wrapper>
   );
 };

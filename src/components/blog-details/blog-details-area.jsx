@@ -70,16 +70,16 @@ const BlogDetailsArea = ({ blog }) => {
                           <div className="postbox__tag tagcloud">
                             <span>Tag</span>
                             <Link href="/blog-details">
-                              <a>Business</a>
+                              Business
                             </Link>
                             <Link href="/blog-details">
-                              <a>Design</a>
+                              Design
                             </Link>
                             <Link href="/blog-details">
-                              <a>apps</a>
+                              apps
                             </Link>
                             <Link href="/blog-details">
-                              <a>data</a>
+                              data
                             </Link>
                           </div>
                         </div>

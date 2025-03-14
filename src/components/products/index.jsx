@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { FooterThree, HeaderSix, Wrapper } from '../../layout';
+import { Footer, Header, Wrapper } from '../../layout';
 import { animationCreate } from '../../utils/utils';
 import Breadcrumb from '../common/breadcrumb/breadcrumb';
 import ProductsArea from './product-area';
@@ -14,10 +14,10 @@ const Products = () => {
 
   return (
     <Wrapper>
-      <HeaderSix />
+      <Header />
       <Breadcrumb title={'Collax Product'} />
       <ProductsArea/>
-      <FooterThree />
+      <Footer />
     </Wrapper>
   );
 };

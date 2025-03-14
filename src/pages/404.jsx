@@ -1,13 +1,13 @@
 import React from 'react';
 import Breadcrumb from '../components/common/breadcrumb/breadcrumb';
 import SEO from '../components/seo';
-import { FooterThree, HeaderSix, Wrapper } from '../layout';
+import { Footer, Header, Wrapper } from '../layout';
 
 const ErrorPage = () => {
   return (
     <Wrapper>
       <SEO pageTitle={'Not Found'} />
-      <HeaderSix />
+      <Header />
       <Breadcrumb title={'404 Page'} back_home={true} />
       {/* <!--404-area-start --> */}
       <div className="tp-404-area tp-404-circle sky-bg pt-200 pb-150 fix">
@@ -22,7 +22,7 @@ const ErrorPage = () => {
         </div>
       </div>
       {/* <!-- 404-area-end --> */}
-      <FooterThree />
+      <Footer />
     </Wrapper>
   );
 };

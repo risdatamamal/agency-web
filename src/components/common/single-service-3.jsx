@@ -16,7 +16,7 @@ const SingleServiceThree = ({ service }) => {
         </div>
         <div className="tp-sv-icon-two">
           <Link href={`/service-details/${id}`}>
-            <a><i className="fas fa-long-arrow-up"></i></a>
+            <i className="fas fa-long-arrow-up"></i>
           </Link>
         </div>
       </div>

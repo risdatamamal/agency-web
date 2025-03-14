@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { FooterThree, HeaderSix, Wrapper } from '../../layout';
+import { Footer, Header, Wrapper } from '../../layout';
 import { animationCreate } from '../../utils/utils';
 import Breadcrumb from '../common/breadcrumb/breadcrumb';
 import WishlistArea from './wishlist-area';
@@ -16,10 +16,10 @@ const Wishlist = () => {
 
   return (
     <Wrapper>
-      <HeaderSix />
+      <Header />
       <Breadcrumb title={'My Wishlist'} />
       <WishlistArea/>
-      <FooterThree />
+      <Footer />
     </Wrapper>
   );
 };

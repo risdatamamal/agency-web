@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { FooterThree, HeaderSix, Wrapper } from '../../layout';
+import { Footer, Header, Wrapper } from '../../layout';
 import { animationCreate } from '../../utils/utils';
 import Breadcrumb from '../common/breadcrumb/breadcrumb';
 import JobDetailsArea from './job-details-area';
@@ -17,10 +17,10 @@ const JobDetails = ({job}) => {
 
   return (
     <Wrapper>
-      <HeaderSix />
+      <Header />
       <Breadcrumb title={job?.title ? job?.title : 'Job Details'} />
       <JobDetailsArea item={job} />
-      <FooterThree />
+      <Footer />
     </Wrapper>
   );
 };

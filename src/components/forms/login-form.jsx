@@ -7,7 +7,7 @@ import useFirebase from '../../hooks/use-firebase';
 
 const LoginForm = () => {
   // use firebase 
-  const {loginWithEmailPassword,resetPassword} = useFirebase();
+  const {loginWithEmailPassword, resetPassword} = useFirebase();
   // use formik
   const { handleChange, handleSubmit, handleBlur, errors, values, touched } = useFormik({
     initialValues: { email: '', password: '' },
@@ -49,16 +49,16 @@ const LoginForm = () => {
       <div className="tp-login-button">
         <button className="tp-btn-yellow w-100" type="submit">Sign In</button>
       </div>
-      <div className="tp-signup d-flex justify-content-between">
+      {/* <div className="tp-signup d-flex justify-content-between">
         <div className="account">
           <a href="#">Don’t have an account?</a>
         </div>
         <div className="signin">
           <Link href="/register">
-            <a >Sign up now</a>
+            Sign up now
           </Link>
         </div>
-      </div>
+      </div> */}
     </form>
   );
 };

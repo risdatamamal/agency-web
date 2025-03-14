@@ -76,7 +76,7 @@ const ProductsItem = ({ itemsPerPage, items }) => {
             <div className="tpproduct__meta">
               <h4 className="tp-product-title">
                 <Link href={`/product-details/${id}`}>
-                  <a>{title}</a>
+                  {title}
                 </Link>
               </h4>
               <span>${price}</span>

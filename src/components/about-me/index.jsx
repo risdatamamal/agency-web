@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { FooterThree, HeaderSix, Wrapper } from '../../layout';
+import { Footer, Header, Wrapper } from '../../layout';
 import { animationCreate } from '../../utils/utils';
 import Breadcrumb from '../common/breadcrumb/breadcrumb';
 import AboutContact from './about-contact';
@@ -17,12 +17,12 @@ const AboutMe = ({team}) => {
 
   return (
     <Wrapper>
-      <HeaderSix />
+      <Header />
       <Breadcrumb title={team?.name ? team?.name : 'Ritarexa Diramen'} />
       <AboutMeArea team={team}/>
       <ExperienceArea/>
       <AboutContact/>
-      <FooterThree />
+      <Footer />
     </Wrapper>
   );
 };

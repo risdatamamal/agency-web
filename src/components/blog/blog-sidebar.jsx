@@ -1,22 +1,30 @@
-import Link from 'next/link';
-import React from 'react';
-import { blog_data } from '../../data';
+import Link from "next/link";
+import React from "react";
+import { blog_data } from "../../data";
 
 const sidebar_contents = {
   widget_contents: [
-    { title: 'Web Design', count: '26' },
-    { title: 'Development', count: '15' },
-    { title: 'Branding', count: '20' },
-    { title: 'Motion Design', count: '18' },
-    { title: 'UI/UX Design', count: '30' },
-    { title: 'Graphic Design', count: '99' },
+    { title: "Web Design", count: "26" },
+    { title: "Development", count: "15" },
+    { title: "Branding", count: "20" },
+    { title: "Motion Design", count: "18" },
+    { title: "UI/UX Design", count: "30" },
+    { title: "Graphic Design", count: "99" },
   ],
   rc_post: blog_data.slice(0, 3),
-  tags: ['landing', 'Charity', 'apps', 'Education', 'data', 'Design', 'website', 'landing page']
-}
+  tags: [
+    "landing",
+    "Charity",
+    "apps",
+    "Education",
+    "data",
+    "Design",
+    "website",
+    "landing page",
+  ],
+};
 
 const { widget_contents, rc_post, tags } = sidebar_contents;
-
 
 const BlogSidebar = () => {
   return (
@@ -28,7 +36,9 @@ const BlogSidebar = () => {
             <form>
               <div className="sidebar__search-input-2">
                 <input type="text" placeholder="Search your keyword..." />
-                <button type="submit"><i className="far fa-search"></i></button>
+                <button type="submit">
+                  <i className="far fa-search"></i>
+                </button>
               </div>
             </form>
           </div>
@@ -41,7 +51,8 @@ const BlogSidebar = () => {
             {widget_contents.map((widget, i) => (
               <li key={i}>
                 <Link href="/blog">
-                  <a>{widget.title}<span>{widget.count}</span></a>
+                  {widget.title}
+                  <span>{widget.count}</span>
                 </Link>
               </li>
             ))}
@@ -54,12 +65,13 @@ const BlogSidebar = () => {
         <div className="sidebar__widget-content">
           <div className="sidebar__post rc__post">
             {rc_post.map((post) => (
-              <div key={post.id} className="rc__post mb-20 d-flex align-items-center">
+              <div
+                key={post.id}
+                className="rc__post mb-20 d-flex align-items-center"
+              >
                 <div className="rc__post-thumb mr-20">
                   <Link href={`/blog-details/${post.id}`}>
-                    <a>
-                      <img src={post.img} alt="" />
-                    </a>
+                    <img src={post.img} alt="" />
                   </Link>
                 </div>
                 <div className="rc__post-content">
@@ -68,7 +80,7 @@ const BlogSidebar = () => {
                   </div>
                   <h3 className="rc__post-title">
                     <Link href={`/blog-details/${post.id}`}>
-                      <a>{post.title.substring(0, 35)}...</a>
+                      {post.title.substring(0, 35)}...
                     </Link>
                   </h3>
                 </div>
@@ -81,9 +93,11 @@ const BlogSidebar = () => {
         <h3 className="sidebar__widget-title">Tags</h3>
         <div className="sidebar__widget-content">
           <div className="tagcloud">
-            {tags.map((tag, i) => <Link key={i} href="/blog">
-              <a>{tag}</a>
-            </Link>)}
+            {tags.map((tag, i) => (
+              <Link key={i} href="/blog">
+                {tag}
+              </Link>
+            ))}
           </div>
         </div>
       </div>

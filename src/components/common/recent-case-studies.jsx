@@ -27,7 +27,7 @@ const CaseArea = ({ padd }) => {
                   <div className="svcase__content">
                     <h4 className="sv-case-sm-title">
                       <Link href={`/portfolio-details/${id}`}>
-                        <a>{title}</a>
+                        {title}
                       </Link>
                     </h4>
                     <p>{subtitle}</p>

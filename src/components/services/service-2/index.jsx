@@ -4,7 +4,7 @@ import { animationCreate } from '../../../utils/utils';
 import Breadcrumb from '../../common/breadcrumb/breadcrumb';
 import CtaTwo from '../../common/cta/cta-2';
 import CaseArea from '../../common/recent-case-studies';
-import TestimonialArea from '../../homes/home-4/testimonial-area';
+import TestimonialArea from '../../home/testimonial-area';
 import ServicesItems from './services-items';
 
 

@@ -4,19 +4,21 @@ import React from 'react';
 function FeatureItem({ title, subtitle, color }) {
   return (
     <div className="col-xl-3 col-lg-3 col-md-6">
-      <div className='acfeature mb-50'>
-        <div className={`ac-circle ${color ? `ac-cirle-color-${color}` : ''}`}></div>
+      <div className="acfeature mb-50">
+        <div
+          className={`ac-circle ${color ? `ac-cirle-color-${color}` : ""}`}
+        ></div>
         <div className="acfeature__item">
           <h3 className="ac-feature-sm-title">
-            <Link href="/about-me">
-              {title}
+            <Link href="/about-me" legacyBehavior>
+              <a>{title}</a>
             </Link>
           </h3>
           <p>{subtitle}</p>
         </div>
       </div>
     </div>
-  )
+  );
 }
 
 const contents = {

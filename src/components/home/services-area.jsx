@@ -31,26 +31,34 @@ const ServicesArea = () => {
         <div className="row">
           {services.map((item, i) => {
             const { id, text_1, title, delay, duration, icon, active } = item;
-            return <div key={id} className="col-xl-4 col-lg-4 col-md-6 mb-30 wow tpfadeUp"
-              data-wow-duration={duration} data-wow-delay={delay}>
-              <div className={`bpservice ${active ? 'active' : ''} text-center`}>
-                <div className={`bpservice__item bp-sv-color-${i + 1}`}>
-                  <div className='bpservice__icon'>
-                    <Link href={`/service-details/${id}`}>
-                     {icon}
-                    </Link>
-                  </div>
-                  <div className="bpservice__content">
-                    <h3 className="bp-sv-sm-title bp-sv-color-1">
-                      <Link href={`/service-details/${id}`}>
-                        {title}
+            return (
+              <div
+                key={id}
+                className="col-xl-4 col-lg-4 col-md-6 mb-30 wow tpfadeUp"
+                data-wow-duration={duration}
+                data-wow-delay={delay}
+              >
+                <div
+                  className={`bpservice ${active ? "active" : ""} text-center`}
+                >
+                  <div className={`bpservice__item bp-sv-color-${i + 1}`}>
+                    <div className="bpservice__icon">
+                      <Link href={`/service-details/${id}`} legacyBehavior>
+                        <a>{icon}</a>
                       </Link>
-                    </h3>
-                    <p>{text_1.substring(0, 60)}...</p>
+                    </div>
+                    <div className="bpservice__content">
+                      <h3 className="bp-sv-sm-title bp-sv-color-1">
+                        <Link href={`/service-details/${id}`} legacyBehavior>
+                          <a>{title}</a>
+                        </Link>
+                      </h3>
+                      <p>{text_1.substring(0, 60)}...</p>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
+            );
           })}
         </div>
       </div>

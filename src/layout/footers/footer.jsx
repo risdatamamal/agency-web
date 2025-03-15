@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import React from 'react';
 import SocialLinks from '../social-links';
-import Image from 'next/image';
 
 const footer_contents = {
   shapes: ['footer/testimonial-shape-5.4.png', 'footer/team-shape-5.3.png'],
@@ -19,7 +18,10 @@ const FooterFive = () => {
       <div className="tp-footer-area pt-120 p-relative black-bg p-relative">
         {shapes.map((s, i) => (
           <div key={i} className={`bs-footer-shape-${i + 1} d-none d-lg-block`}>
-            <Image src={`/assets/img/${s}`} alt="Shapes" width={45} height={45} />
+            <img
+              src={`/assets/img/${s}`}
+              alt="Shapes"
+            />
           </div>
         ))}
         <div className="container">
@@ -48,16 +50,20 @@ const FooterFive = () => {
               <div className="col-xl-4 col-lg-4 col-md-12 col-12">
                 <div className="tp-copyright-logo-box mb-10">
                   <div className="tp-copyright-logo text-center text-lg-start">
-                    <Link href="/">
-                      <Image src={logo} alt="Logo" width={180} height={60} />
+                    <Link href="/" legacyBehavior>
+                      <img src={logo} alt="Logo" />
                     </Link>
                   </div>
                 </div>
               </div>
               <div className="col-xl-4 col-lg-4 col-md-6">
                 <div className="tp-cpoyright-menu  bp-cpoyright-menu text-md-start text-center text-lg-center mb-10">
-                  <Link href="/faq">FAQ</Link>
-                  <Link href="/price">Pricing Plan</Link>
+                  <Link href="/faq" legacyBehavior>
+                    <a>FAQ</a>
+                  </Link>
+                  <Link href="/price" legacyBehavior>
+                    <a>Pricing Plan</a>
+                  </Link>
                 </div>
               </div>
               <div className="col-xl-4 col-lg-4 col-md-6">

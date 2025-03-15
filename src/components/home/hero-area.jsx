@@ -4,7 +4,6 @@ import useModal from '../../hooks/use-modal';
 import { HeroSocials } from '../../layout/social-links';
 import { HighlightSix } from '../../svg';
 import VideoModal from '../common/modals/modal-video';
-import Image from 'next/image';
 
 const hero_contents = {
   title: <>Providing unparalleled <span className="tp-highlight"> <HighlightSix /> <i>IT business solution</i></span> to maximum satisfaction</>,
@@ -29,7 +28,7 @@ const HeroArea = () => {
           data-wow-duration=".3s"
           data-wow-delay=".6s"
         >
-          <Image src="/assets/img/hero/hero-shape-6.1.png" alt="Background Hero" width={650} height={970} />
+          <img src="/assets/img/hero/hero-shape-6.1.png" alt="Background Hero" />
         </div>
         <div className="container">
           <div className="row">
@@ -83,7 +82,7 @@ const HeroArea = () => {
                   data-wow-duration=".9s"
                   data-wow-delay="1s"
                 >
-                  <Image className="z-index-1" src={hero_img} alt="Hero Image" width={870} height={490} />
+                  <img className="z-index-1" src={hero_img} alt="Hero Image" />
                 </div>
               </div>
             </div>

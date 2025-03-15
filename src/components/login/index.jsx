@@ -15,9 +15,9 @@ const Login = () => {
   return (
     <Wrapper>
       {/* <Header /> */}
-      {/* <Breadcrumb title={'Login Page'} /> */}
+      {/* <Breadcrumb title={'Login'} /> */}
       <LoginArea/>
-      {/* <Footer /> */}
+      <Footer />
     </Wrapper>
   );
 };

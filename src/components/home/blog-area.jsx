@@ -31,20 +31,26 @@ const BlogArea = () => {
           {blog_items.map((item) => {
             const { id, img, meta_tag, short_desc, duration, delay, title } = item;
             return (
-              <div key={id} className="col-xl-4 col-lg-4 col-md-6 wow tpfadeUp"
-                data-wow-duration={duration} data-wow-delay={delay}>
+              <div
+                key={id}
+                className="col-xl-4 col-lg-4 col-md-6 wow tpfadeUp"
+                data-wow-duration={duration}
+                data-wow-delay={delay}
+              >
                 <div className="bpblog">
                   <div className="bpblog__item mb-30">
                     <div className="bpblog__img w-img fix">
-                      <Link href={`/blog-details/${id}`}>
+                      <Link href={`/blog-details/${id}`} legacyBehavior>
                         <img src={img} alt="" />
                       </Link>
                     </div>
                     <div className="bpblog__content">
-                      <span><a href="#">{meta_tag}</a></span>
+                      <span>
+                        <a href="#">{meta_tag}</a>
+                      </span>
                       <h4 className="bp-blog-title">
-                        <Link href={`/blog-details/${id}`}>
-                          {title}
+                        <Link href={`/blog-details/${id}`} legacyBehavior>
+                          <a>{title}</a>
                         </Link>
                       </h4>
                       <p className="m-0">{short_desc}...</p>
@@ -52,7 +58,7 @@ const BlogArea = () => {
                   </div>
                 </div>
               </div>
-            )
+            );
           })}
 
         </div>

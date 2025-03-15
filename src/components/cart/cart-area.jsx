@@ -45,13 +45,19 @@ const CartInfo = () => {
                       {cartItems.map((item, i) => (
                         <tr key={i}>
                           <td className="product-thumbnail">
-                            <Link href={`/shop-details/${item.id}`}>
+                            <Link
+                              href={`/shop-details/${item.id}`}
+                              legacyBehavior
+                            >
                               <img src={item.img} alt="" />
                             </Link>
                           </td>
                           <td className="product-name">
-                            <Link href={`/product-details/${item.id}`}>
-                              {item.title}
+                            <Link
+                              href={`/product-details/${item.id}`}
+                              legacyBehavior
+                            >
+                              <a>{item.title}</a>
                             </Link>
                           </td>
                           <td className="product-price">

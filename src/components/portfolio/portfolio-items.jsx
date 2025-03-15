@@ -77,8 +77,8 @@ const PortfolioItems = () => {
                   </div>
                   <div className="tp-portfolio-content-box">
                     <h3 className="portfolio-animation-title">
-                      <Link href={`/portfolio/details/${item.id}`}>
-                        {item.title}
+                      <Link href={`/portfolio/details/${item.id}`} legacyBehavior>
+                        <a>{item.title}</a>
                       </Link>
                     </h3>
                     <span>{item.subtitle}</span>

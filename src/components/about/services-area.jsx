@@ -24,17 +24,22 @@ export default ServicesArea;
 
 const ChoseItem = ({ duration, delay, item_num, icon, title, text, color }) => {
   return (
-    <div className="col-xl-3 col-lg-6 col-md-6 col-12 wow tpfadeUp"
-      data-wow-duration={duration} data-wow-delay={delay}>
+    <div
+      className="col-xl-3 col-lg-6 col-md-6 col-12 wow tpfadeUp"
+      data-wow-duration={duration}
+      data-wow-delay={delay}
+    >
       <div className="tp-chose-item mb-30">
         <div className={`tpchosebox ${item_num && item_num}`}>
           <div className={`tpchosebox__icon ${color && color} mb-30`}>
-            <a href="#"><i className={icon}></i></a>
+            <a href="#">
+              <i className={icon}></i>
+            </a>
           </div>
           <div className="tpchosebox__content">
             <h4>
-              <Link href="/service-details">
-                {title}
+              <Link href="/service-details" legacyBehavior>
+                <a>{title}</a>
               </Link>
             </h4>
             <p>{text}</p>
@@ -42,5 +47,5 @@ const ChoseItem = ({ duration, delay, item_num, icon, title, text, color }) => {
         </div>
       </div>
     </div>
-  )
+  );
 }

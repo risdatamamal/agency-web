@@ -18,22 +18,28 @@ const CaseArea = ({ padd }) => {
           <div className="row gx-6">
             {case_studies.map((item) => {
               const { id, img, title, duration, delay, subtitle } = item;
-              return <div key={id} className="col-xl-4 col-lg-4 col-md-6 col-12 wow tpfadeUp"
-                data-wow-duration={duration} data-wow-delay={delay}>
-                <div className="svcase text-center mb-50">
-                  <div className="svcase__img fix">
-                    <img src={img} alt="" />
-                  </div>
-                  <div className="svcase__content">
-                    <h4 className="sv-case-sm-title">
-                      <Link href={`/portfolio-details/${id}`}>
-                        {title}
-                      </Link>
-                    </h4>
-                    <p>{subtitle}</p>
+              return (
+                <div
+                  key={id}
+                  className="col-xl-4 col-lg-4 col-md-6 col-12 wow tpfadeUp"
+                  data-wow-duration={duration}
+                  data-wow-delay={delay}
+                >
+                  <div className="svcase text-center mb-50">
+                    <div className="svcase__img fix">
+                      <img src={img} alt="" />
+                    </div>
+                    <div className="svcase__content">
+                      <h4 className="sv-case-sm-title">
+                        <Link href={`/portfolio-details/${id}`} legacyBehavior>
+                          <a>{title}</a>
+                        </Link>
+                      </h4>
+                      <p>{subtitle}</p>
+                    </div>
                   </div>
                 </div>
-              </div>
+              );
             })}
           </div>
           <div className="row">

@@ -59,38 +59,54 @@ const ProductsItem = ({ itemsPerPage, items }) => {
         const { id, duration, delay, img, title, price, rating } = item;
         const isCartSelected = cart_products.find(i => i.id === id);
         const isWishlistSelected = wishlists.find(w => w.id === id)
-        return <div key={id} className="col-xl-3 col-lg-3 col-md-4 col-sm-6 wow tpfadeUp"
-          data-wow-duration={duration} data-wow-delay={delay}>
-          <div className="tpproduct text-center mb-30">
-            <div className="tpproduct__img">
-              <img className="w-100" src={img} alt="" />
-              <div className="tp-product-icon">
-                <button onClick={() => handleAddProduct(item)}>
-                  <i className={isCartSelected ? 'fas fa-check' : "fal fa-shopping-basket"}></i>
-                </button>
-                <button onClick={() => handleWishlist(item)}>
-                  <i className={isWishlistSelected ? 'fas fa-heart' : "fal fa-heart"}></i>
-                </button>
+        return (
+          <div
+            key={id}
+            className="col-xl-3 col-lg-3 col-md-4 col-sm-6 wow tpfadeUp"
+            data-wow-duration={duration}
+            data-wow-delay={delay}
+          >
+            <div className="tpproduct text-center mb-30">
+              <div className="tpproduct__img">
+                <img className="w-100" src={img} alt="" />
+                <div className="tp-product-icon">
+                  <button onClick={() => handleAddProduct(item)}>
+                    <i
+                      className={
+                        isCartSelected
+                          ? "fas fa-check"
+                          : "fal fa-shopping-basket"
+                      }
+                    ></i>
+                  </button>
+                  <button onClick={() => handleWishlist(item)}>
+                    <i
+                      className={
+                        isWishlistSelected ? "fas fa-heart" : "fal fa-heart"
+                      }
+                    ></i>
+                  </button>
+                </div>
               </div>
-            </div>
-            <div className="tpproduct__meta">
-              <h4 className="tp-product-title">
-                <Link href={`/product-details/${id}`}>
-                  {title}
-                </Link>
-              </h4>
-              <span>${price}</span>
-              <div className="product-rating">
-                <Rating
-                  fullSymbol={<i className="fas fa-star"></i>}
-                  emptySymbol={<i className="fal fa-star"></i>}
-                  initialRating={rating}
-                  readonly
-                />
+              <div className="tpproduct__meta">
+                <h4 className="tp-product-title">
+                  <Link href={`/product-details/${id}`} legacyBehavior>
+                    <a>{title}</a>
+                  </Link>
+                </h4>
+                <span>${price}</span>
+                <div className="product-rating">
+                  <Rating
+                    fullSymbol={<i className="fas fa-star"></i>}
+                    emptySymbol={<i className="fal fa-star"></i>}
+                    initialRating={rating}
+                    readonly
+                  />
+                </div>
               </div>
             </div>
           </div>
-        </div>
+        );
       })}
 
       {/* pagination start*/}

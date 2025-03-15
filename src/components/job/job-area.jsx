@@ -41,29 +41,37 @@ const JobArea = () => {
           <div className="row grid">
             {jobItems.map((item) => {
               const { id, brand, location, time, title } = item;
-              return <div key={id} className="col-xl-3 grid-item cat2">
-                <div className="jobitem mb-30">
-                  <div className="jobitem__brand">
-                    <img src={brand} alt="" />
-                  </div>
-                  <div className="jobitem__title">
-                    <h4 className="job-title-sm">
-                      <Link href={`/job-details/${id}`}>
-                        {title}
+              return (
+                <div key={id} className="col-xl-3 grid-item cat2">
+                  <div className="jobitem mb-30">
+                    <div className="jobitem__brand">
+                      <img src={brand} alt="" />
+                    </div>
+                    <div className="jobitem__title">
+                      <h4 className="job-title-sm">
+                        <Link href={`/job-details/${id}`} legacyBehavior>
+                          <a>{title}</a>
+                        </Link>
+                      </h4>
+                    </div>
+                    <div className="jobitem__details">
+                      <p className="mb-0">
+                        <i className="fal fa-map-marker-alt"></i>
+                        {location}
+                      </p>
+                      <p className="mb-0">
+                        <i className="fal fa-clock"></i>
+                        {time}
+                      </p>
+                    </div>
+                    <div className="jobitem__button">
+                      <Link href={`/job-details/${id}`} legacyBehavior>
+                        <button className="tp-btn-border-sm">Apply now</button>
                       </Link>
-                    </h4>
-                  </div>
-                  <div className="jobitem__details">
-                    <p className="mb-0"><i className="fal fa-map-marker-alt"></i>{location}</p>
-                    <p className="mb-0"><i className="fal fa-clock"></i>{time}</p>
-                  </div>
-                  <div className="jobitem__button">
-                    <Link href={`/job-details/${id}`}>
-                      <button className="tp-btn-border-sm">Apply now</button>
-                    </Link>
+                    </div>
                   </div>
                 </div>
-              </div>
+              );
             })}
           </div>
 

@@ -77,7 +77,7 @@ const RegisterForm = () => {
           <a href="#">Don’t have an account?</a>
         </div>
         <div className="signin">
-          <Link href="/login" legacyBehavior>
+          <Link href="/system/auth/login" legacyBehavior>
             <a>Sign in now</a>
           </Link>
         </div>

@@ -6,6 +6,7 @@ import { useDispatch } from "react-redux";
 import { toast } from "react-toastify";
 import firebaseInitialization from "../firebase/firebase.init";
 import { add_user, sign_out, user_info } from "../redux/features/auth-slice";
+import { useRouter } from "next/router";
 
 // initialize firebase app
 firebaseInitialization();
@@ -13,8 +14,9 @@ firebaseInitialization();
 // declare auth
 const auth = getAuth();
 
-
 const useFirebase = () => {
+  // router
+  const router = useRouter();
   // dispatch
   const dispatch = useDispatch()
   // register With Email Password
@@ -23,8 +25,11 @@ const useFirebase = () => {
       .then((user) => {
         updateProfile(auth.currentUser, {
           displayName: name,
-        }).then(() => {
         }).catch((error) => {
+          const errorMessage = error?.message;
+          toast.error(`${errorMessage}`, {
+            position: 'top-left'
+          })  
         });
         dispatch(add_user({
           name: name,
@@ -34,6 +39,7 @@ const useFirebase = () => {
         toast.success(`${name} register successfully`, {
           position: 'top-left'
         })
+        router.push("/");
       })
       .catch((error) => {
         const errorMessage = error?.message;
@@ -41,7 +47,6 @@ const useFirebase = () => {
           position: 'top-left'
         })
       });
-
   }
 
 
@@ -58,6 +63,7 @@ const useFirebase = () => {
         toast.success(`${name} login successfully`, {
           position: 'top-left'
         })
+        router.push('/')
       })
       .catch((error) => {
         const errorMessage = error.message;
@@ -65,7 +71,6 @@ const useFirebase = () => {
           position: 'top-left'
         })
       });
-
   }
 
   // password reset email sent
@@ -75,6 +80,7 @@ const useFirebase = () => {
         toast.success(`Password reset email sent!`, {
           position: 'top-left'
         })
+        router.push("/")
       })
       .catch((error) => {
         const errorMessage = error?.message;
@@ -82,18 +88,20 @@ const useFirebase = () => {
           position: 'top-left'
         })
       });
-
   }
 
   // logout
   const logout = () => {
     signOut(auth).then(() => {
       dispatch(sign_out())
-      toast.success(`Sign-out successful.`, {
+      toast.success(`Signout successful.`, {
         position: 'top-left'
       })
     }).catch((error) => {
-      // An error happened.
+      const errorMessage = error?.message;
+      toast.error(`${errorMessage}`, {
+        position: 'top-left'
+      })
     });
   }
 

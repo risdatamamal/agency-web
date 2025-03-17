@@ -25,7 +25,7 @@ const Home = () => {
       <Industries/>
       <AboutArea/>
       <Projects/>
-      <TestimonialArea home_6={true}/>
+      <TestimonialArea button={true}/>
       <BlogArea/>
       <Footer/>
     </Wrapper>

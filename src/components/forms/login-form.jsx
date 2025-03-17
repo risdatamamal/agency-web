@@ -69,7 +69,7 @@ const LoginForm = () => {
           Sign In
         </button>
       </div>
-      {/* <div className="tp-signup d-flex justify-content-between">
+      <div className="tp-signup d-flex justify-content-between">
         <div className="account">
           <a href="#">Don’t have an account?</a>
         </div>
@@ -78,7 +78,7 @@ const LoginForm = () => {
             <a>Sign up now</a>
           </Link>
         </div>
-      </div> */}
+      </div>
     </form>
   );
 };

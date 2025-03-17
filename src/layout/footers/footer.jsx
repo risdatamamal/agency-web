@@ -5,10 +5,10 @@ import Image from 'next/image';
 
 const footer_contents = {
   shapes: ['footer/testimonial-shape-5.4.png', 'footer/team-shape-5.3.png'],
-  title: 'Discover our collax inner system',
-  sm_text: 'At Collax we specialize in designing, building, shipping and scaling beautiful, usable products with blazing-fast efficiency',
+  title: 'Discover our company\'s inner system',
+  sm_text: 'At Javaprojects we specialize in designing, building, shipping and scaling beautiful, usable products with blazing-fast efficiency',
   btn_text: "Contact us",
-  copy_right: <>© {new Date().getFullYear()} Personal Portfolio , All Right Receved.</>,
+  copy_right: <>© {new Date().getFullYear()} Javaprojects Indonesia, All Right Receved.</>,
   logo: '/assets/img/logo/logo-jp.png',
 }
 const { shapes, title, sm_text, btn_text, copy_right, logo } = footer_contents;

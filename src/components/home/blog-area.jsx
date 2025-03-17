@@ -5,7 +5,7 @@ import { blog_data } from '../../data';
 const blog_contents = {
   shapes: ['blog/hero-shape-5.1.png', 'testimonial/testimonial-shape-5.3.png'],
   subtitle: 'Blog Post',
-  title: 'Collax news & blog',
+  title: 'New Blogs',
   blog_items: blog_data.filter(b => b.home_6),
 }
 const { subtitle, title, shapes, blog_items } = blog_contents;
@@ -15,7 +15,7 @@ const BlogArea = () => {
     <div className="tp-blog-area yellow-bg bg-radius-none pt-125 pb-100 p-relative">
       {shapes.map((s, i) => (
         <div key={i} className={`bs-blog-shape-${i + 1} d-none d-lg-block`}>
-          <img src={`/assets/img/${s}`} alt="" />
+          <img src={`/assets/img/${s}`} alt="Shapes" />
         </div>
       ))}
       <div className="container">
@@ -41,7 +41,7 @@ const BlogArea = () => {
                   <div className="bpblog__item mb-30">
                     <div className="bpblog__img w-img fix">
                       <Link href={`/blog-details/${id}`} legacyBehavior>
-                        <img src={img} alt="" />
+                        <img src={img} alt="Blog Image" />
                       </Link>
                     </div>
                     <div className="bpblog__content">

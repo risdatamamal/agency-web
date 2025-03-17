@@ -4,7 +4,7 @@ import ImageLightBox from '../common/modals/image-lightbox';
 
 const project_contents = {
   subtitle: 'Projects',
-  title: <>Collax latest <span className="tp-section-highlight"> project <HighlightThree /> </span></>,
+  title: <>Latest <span className="tp-section-highlight"> project <HighlightThree /> </span></>,
   images: [
     '/assets/img/project/project-6.1.jpg',
     '/assets/img/project/project-6.2.jpg',
@@ -42,7 +42,7 @@ const Projects = () => {
               <div key={i} className="col-xl-6 col-lg-6 col-md-6">
                 <div className="bp-project-item p-relative">
                   <div className="bp-project-img fix w-img">
-                    <img src={img} alt="" />
+                    <img src={img} alt="Banner" />
                   </div>
                   <div className="bp-project-item-link">
                     <span>

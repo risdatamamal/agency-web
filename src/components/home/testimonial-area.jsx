@@ -4,10 +4,10 @@ import { Pagination } from "swiper";
 import Link from 'next/link';
 
 const testimonial_contents = {
-  subtitle: 'Testimonial',
-  title: 'Check what',
+  subtitle: 'Review',
+  title: 'What',
   highlight_text: 'client say',
-  btn_text: 'More Testimonial',
+  btn_text: 'More Review',
   testimonial_data: [
     {
       id: 1,
@@ -50,7 +50,7 @@ const testimonial_contents = {
 
 const { btn_text, highlight_text, subtitle, testimonial_data, title } = testimonial_contents;
 
-const TestimonialArea = ({ home_6, style_2 = false }) => {
+const TestimonialArea = ({ button, style_2 = false }) => {
   const [sliderLoop, setSliderLoop] = React.useState(false);
   React.useEffect(() => setSliderLoop(true), []);
   return (
@@ -61,12 +61,12 @@ const TestimonialArea = ({ home_6, style_2 = false }) => {
     >
       <div
         className={`${
-          home_6 ? "bs-testi-shape-1" : "ce-testi-shape"
+          button ? "bs-testi-shape-1" : "ce-testi-shape"
         } d-none d-lg-block`}
       >
         <img
           src={
-            home_6
+            button
               ? "/assets/img/testimonial/testimonial-shape-5.3.png"
               : "/assets/img/hero/hero-shape-4.png"
           }
@@ -80,7 +80,7 @@ const TestimonialArea = ({ home_6, style_2 = false }) => {
               <div className="tp-testimonial-title-box ">
                 <h5 className="tp-subtitle">{subtitle}</h5>
                 <h2 className="tp-title-sm">
-                  {title}
+                  {title}{" "}
                   <span className="tp-section-highlight">
                     {highlight_text}
                     <svg
@@ -99,7 +99,7 @@ const TestimonialArea = ({ home_6, style_2 = false }) => {
                 <Link href="/testimonial" legacyBehavior>
                   <a
                     className={`${
-                      home_6 || style_2 ? "tp-btn-yellow" : "tp-btn"
+                      button || style_2 ? "tp-btn-yellow" : "tp-btn"
                     }`}
                   >
                     {btn_text}

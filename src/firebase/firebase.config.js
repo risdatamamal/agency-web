@@ -1,10 +1,11 @@
 const firebaseConfig = {
-  apiKey: "AIzaSyC6q63VgF5ikfKJCDajmC-aFvzpEh6dBJU",
-  authDomain: "collax-cf6be.firebaseapp.com",
-  projectId: "collax-cf6be",
-  storageBucket: "collax-cf6be.appspot.com",
-  messagingSenderId: "266530521253",
-  appId: "1:266530521253:web:95c0f3fe64f27eedb20d4c"
+  apiKey: "AIzaSyA2AQxzQF5_JhbYbmUfMMZgsiFT5W3CkD0",
+  authDomain: "javaprojects-id.firebaseapp.com",
+  projectId: "javaprojects-id",
+  storageBucket: "javaprojects-id.firebasestorage.app",
+  messagingSenderId: "368126092786",
+  appId: "1:368126092786:web:c0420bd3be6349d3c8f76b"
+  // measurementId: "G-7583X562SM",
 };
 
 export default firebaseConfig;

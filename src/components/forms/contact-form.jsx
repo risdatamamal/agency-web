@@ -22,7 +22,7 @@ const ContactForm = () => {
   })
 
   return (
-    <form id="contact-form" onSubmit={handleSubmit} name="contact" netlify>
+    <form id="contact-form" onSubmit={handleSubmit} netlify>
       <div className='mb-30'>
         <input value={values.name} onChange={handleChange} onBlur={handleBlur}
           name="name" type="text" placeholder="Enter your Name" />

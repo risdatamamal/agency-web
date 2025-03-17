@@ -58,11 +58,13 @@ const Header = () => {
               </div>
               <div className="col-xxl-4 col-xl-3 col-lg-3">
                 <div className="tp-header-left d-flex align-items-center justify-content-end ">
-                  {/* <ul className="d-none d-xxl-block">
+                  <ul className="d-none d-xxl-block">
                     {!user?.email && (
                       <li>
                         <Link href="/system/auth/login" legacyBehavior>
-                          <i className="far fa-user fa-user"></i> Login
+                          <a>
+                            <i className="far fa-user fa-user"></i> Login
+                          </a>
                         </Link>
                       </li>
                     )}
@@ -75,13 +77,13 @@ const Header = () => {
                         </button>
                       </li>
                     )}
-                    <li>
+                    {/* <li>
                       <a href="#">
                         EN<i className="fal fa-arrow-down arrow-down"></i>
                       </a>
                       <Languages />
-                    </li>
-                  </ul> */}
+                    </li> */}
+                  </ul>
                   <div className="tp-header-yellow-button">
                     <Link href="/about" legacyBehavior>
                       <a className="tp-btn-white">How it Works</a>

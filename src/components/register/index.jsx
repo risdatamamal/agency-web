@@ -15,8 +15,8 @@ const Register = () => {
 
   return (
     <Wrapper>
-      <Header />
-      <Breadcrumb title={'Register Page'} />
+      {/* <Header /> */}
+      {/* <Breadcrumb title={'Register Page'} /> */}
       <RegisterArea/>
       <Footer />
     </Wrapper>

@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import React from 'react';
 import SocialLinks from '../social-links';
+import Image from 'next/image';
 
 const footer_contents = {
   shapes: ['footer/testimonial-shape-5.4.png', 'footer/team-shape-5.3.png'],
@@ -8,7 +9,7 @@ const footer_contents = {
   sm_text: 'At Collax we specialize in designing, building, shipping and scaling beautiful, usable products with blazing-fast efficiency',
   btn_text: "Contact us",
   copy_right: <>© {new Date().getFullYear()} Personal Portfolio , All Right Receved.</>,
-  logo: '/assets/img/logo/logo-white.png',
+  logo: '/assets/img/logo/logo-jp.png',
 }
 const { shapes, title, sm_text, btn_text, copy_right, logo } = footer_contents;
 
@@ -18,10 +19,7 @@ const FooterFive = () => {
       <div className="tp-footer-area pt-120 p-relative black-bg p-relative">
         {shapes.map((s, i) => (
           <div key={i} className={`bs-footer-shape-${i + 1} d-none d-lg-block`}>
-            <img
-              src={`/assets/img/${s}`}
-              alt="Shapes"
-            />
+            <img src={`/assets/img/${s}`} alt="Shapes" />
           </div>
         ))}
         <div className="container">
@@ -51,7 +49,13 @@ const FooterFive = () => {
                 <div className="tp-copyright-logo-box mb-10">
                   <div className="tp-copyright-logo text-center text-lg-start">
                     <Link href="/" legacyBehavior>
-                      <img src={logo} alt="Logo" />
+                      <Image
+                        src={logo}
+                        alt="Logo"
+                        width={80}
+                        height={80}
+                        style={{ borderRadius: "10%" }}
+                      />
                     </Link>
                   </div>
                 </div>

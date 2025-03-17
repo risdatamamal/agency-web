@@ -8,6 +8,7 @@ import { get_user } from "../../redux/features/auth-slice";
 import Languages from "./component/languages";
 import MobileMenu from "./mobile-menu";
 import NavMenus from "./nav-menus";
+import Image from "next/image";
 
 const Header = () => {
   // headerSticky
@@ -36,9 +37,12 @@ const Header = () => {
               <div className="col-xxl-3 col-xl-3 col-lg-3">
                 <div className="tp-logo text-start">
                   <Link href="/" legacyBehavior>
-                    <img
-                      src="/assets/img/logo/logo-blue.png"
+                    <Image
+                      src="/assets/img/logo/logo-jp.png"
                       alt="Logo"
+                      width={80}
+                      height={80}
+                      style={{ borderRadius: "10%" }}
                     />
                   </Link>
                 </div>

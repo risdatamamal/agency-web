@@ -3,7 +3,7 @@ import React from 'react';
 const social_links=[
   {link: 'http://facebook.com', target: '_blank', icon: 'fab fa-facebook-f'},
   {link: 'http://twitter.com', target: '_blank', icon: 'fab fa-twitter'},
-  {link: 'https://www.skype.com/en/', target: '_blank', icon: 'fab fa-skype'},
+  // {link: 'https://www.skype.com/en/', target: '_blank', icon: 'fab fa-skype'},
   {link: 'https://www.youtube.com/', target: '_blank', icon: 'fab fa-youtube'}
 ]
 

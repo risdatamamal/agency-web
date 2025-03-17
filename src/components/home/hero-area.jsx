@@ -1,17 +1,31 @@
-import Link from 'next/link';
-import React from 'react';
-import useModal from '../../hooks/use-modal';
-import { HeroSocials } from '../../layout/social-links';
-import { HighlightSix } from '../../svg';
-import VideoModal from '../common/modals/modal-video';
+import Link from "next/link";
+import React from "react";
+import useModal from "../../hooks/use-modal";
+import { HeroSocials } from "../../layout/social-links";
+import { HighlightSix } from "../../svg";
+import VideoModal from "../common/modals/modal-video";
 
 const hero_contents = {
-  title: <>Providing unparalleled <span className="tp-highlight"> <HighlightSix /> <i>IT business solution</i></span> to maximum satisfaction</>,
-  sm_text: <>At collax we specialize in designing, building, shipping and scaling <br/> beautiful, usable products with blazing-fast efficiency</>,
-  video_id: 'AFHnVR1vb84',
-  video_title: 'Behind the scenes',
-  hero_img: '/assets/img/hero/hero-6.1.png',
-}
+  title: (
+    <>
+      Providing unparalleled{" "}
+      <span className="tp-highlight">
+        {" "}
+        <HighlightSix /> <i>IT business solution</i>
+      </span>{" "}
+      to maximum satisfaction
+    </>
+  ),
+  sm_text: (
+    <>
+      At collax we specialize in designing, building, shipping and scaling{" "}
+      <br /> beautiful, usable products with blazing-fast efficiency
+    </>
+  ),
+  video_id: "AFHnVR1vb84",
+  video_title: "Behind the scenes",
+  hero_img: "/assets/img/hero/hero-6.1.png",
+};
 
 const { hero_img, sm_text, title, video_id, video_title } = hero_contents;
 
@@ -20,15 +34,18 @@ const HeroArea = () => {
   return (
     <React.Fragment>
       <div className="tp-hero-area tp-hero-border tp-bp-hero-space p-relative grey-bg fix">
-        {/* <div className="tp-hero-social bs-hero-social d-none d-xxl-block">
+        <div className="tp-hero-social pb-30 bs-hero-social d-none d-xxl-block">
           <HeroSocials />
-        </div> */}
+        </div>
         <div
           className="tp-bp-hero-shape d-none d-lg-block wow tpfadeRight"
           data-wow-duration=".3s"
           data-wow-delay=".6s"
         >
-          <img src="/assets/img/hero/hero-shape-6.1.png" alt="Background Hero" />
+          <img
+            src="/assets/img/hero/hero-shape-6.1.png"
+            alt="Background Hero"
+          />
         </div>
         <div className="container">
           <div className="row">
@@ -68,7 +85,7 @@ const HeroArea = () => {
                     <span>{video_title}</span>
                   </div>
                 </div>
-                <div className="tp-hero-social  pb-30 d-xxl-none d-xl-block">
+                <div className="tp-hero-social pb-30 d-xxl-none d-xl-block">
                   <div className="tp-hero-social bp-hero-social bs-xl-hero-social">
                     <HeroSocials hide_title={true} />
                   </div>
@@ -78,7 +95,7 @@ const HeroArea = () => {
             <div className="col-xl-6 col-lg-5">
               <div className="tp-hero-right">
                 <div
-                  className="tp-bp-hero__img  p-relative wow tpfadeRight"
+                  className="tp-bp-hero__img p-relative wow tpfadeRight"
                   data-wow-duration=".9s"
                   data-wow-delay="1s"
                 >

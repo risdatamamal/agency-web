@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import React from 'react';
-import SocialLinks from '../social-links';
+import { SocialLinks } from '../social-links';
 import Image from 'next/image';
 
 const footer_contents = {

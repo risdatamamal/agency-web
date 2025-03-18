@@ -19,6 +19,7 @@ const useFirebase = () => {
   const router = useRouter();
   // dispatch
   const dispatch = useDispatch()
+
   // register With Email Password
   const registerWithEmailPassword = (email, password, name) => {
     createUserWithEmailAndPassword(auth, email, password)
@@ -80,7 +81,6 @@ const useFirebase = () => {
         toast.success(`Password reset email sent!`, {
           position: 'top-left'
         })
-        router.push("/")
       })
       .catch((error) => {
         const errorMessage = error?.message;

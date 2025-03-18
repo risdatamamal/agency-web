@@ -1,31 +1,40 @@
-import React from 'react';
+import React from "react";
+import useSocialLinks from "../data/use-social-links";
 
-const social_links=[
-  {link: 'http://facebook.com', target: '_blank', icon: 'fab fa-facebook-f'},
-  {link: 'http://twitter.com', target: '_blank', icon: 'fab fa-twitter'},
-  // {link: 'https://www.skype.com/en/', target: '_blank', icon: 'fab fa-skype'},
-  {link: 'https://www.youtube.com/', target: '_blank', icon: 'fab fa-youtube'}
-]
+export const HeroSocialLinks = ({ hide_title = false }) => {
+  const socialLinks = useSocialLinks();
 
-const hero_socials = [
-  { num: 1, link:'http://facebook.com', target: '_blank', icon: 'fab fa-facebook-f social-icon-1', title: 'Facebook' },
-  { num: 3, link:'https://www.youtube.com/', target: '_blank', icon: 'fab fa-youtube social-icon-3', title: 'Youtube' },
-  { num: 2, link:'http://twitter.com', target: '_blank', icon:'fab fa-twitter social-icon-2', title: 'Twitter' },
-]
-
-export const HeroSocials = ({hide_title=false}) => {
   return (
-    <>{hero_socials.map((l, i) => <a key={i} href={l.link} className={`social-icon-${l.num}`}
-    target={l.target ? l.target:''}><i className={l.icon}></i>{hide_title?'':l.title}</a>)}</>
-  );
-};
-
-const SocialLinks = () => {
-  return (
-    <>{social_links.map((l, i) => <a key={i} href={l.link}
-    target={l.target ? l.target:''}><i className={l.icon}></i></a>)}
+    <>
+      {socialLinks
+        .filter((l) => l.is_active)
+        .map((l, i) => (
+          <a
+            key={i}
+            href={l.link}
+            className={`${l.icon_class}`}
+            target={l.target ? l.target : ""}
+          >
+            <i className={`${l.icon} ${l.icon_class}`}></i>
+            {hide_title ? "" : l.title}
+          </a>
+        ))}
     </>
   );
 };
 
-export default SocialLinks;
+export const SocialLinks = () => {
+  const socialLinks = useSocialLinks();
+
+  return (
+    <>
+      {socialLinks
+        .filter((l) => l.is_active)
+        .map((l, i) => (
+          <a key={i} href={l.link} target={l.target ? l.target : ""}>
+            <i className={l.icon}></i>
+          </a>
+        ))}
+    </>
+  );
+};

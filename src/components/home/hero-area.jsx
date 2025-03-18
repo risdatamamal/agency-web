@@ -1,12 +1,12 @@
 import Link from "next/link";
 import React from "react";
 import useModal from "../../hooks/use-modal";
-import { HeroSocials } from "../../layout/social-links";
+import { HeroSocialLinks } from "../../layout/social-links";
 import { HighlightSix } from "../../svg";
 import VideoModal from "../common/modals/modal-video";
 
 const hero_contents = {
-  title: (
+  header_title: (
     <>
       Providing unparalleled{" "}
       <span className="tp-highlight">
@@ -16,7 +16,7 @@ const hero_contents = {
       to maximum satisfaction
     </>
   ),
-  sm_text: (
+  header_desc: (
     <>
       At collax we specialize in designing, building, shipping and scaling{" "}
       <br /> beautiful, usable products with blazing-fast efficiency
@@ -24,10 +24,12 @@ const hero_contents = {
   ),
   video_id: "AFHnVR1vb84",
   video_title: "Behind the scenes",
-  hero_img: "/assets/img/hero/hero-6.1.png",
+  image_path: "/assets/img/hero/hero-6.1.png",
+  background_image_path: "/assets/img/hero/hero-shape-6.1.png",
 };
 
-const { hero_img, sm_text, title, video_id, video_title } = hero_contents;
+const { background_image_path, image_path, header_desc, header_title, video_id, video_title } =
+  hero_contents;
 
 const HeroArea = () => {
   const { isVideoOpen, setIsVideoOpen } = useModal();
@@ -35,7 +37,7 @@ const HeroArea = () => {
     <React.Fragment>
       <div className="tp-hero-area tp-hero-border tp-bp-hero-space p-relative grey-bg fix">
         <div className="tp-hero-social pb-30 bs-hero-social d-none d-xxl-block">
-          <HeroSocials />
+          <HeroSocialLinks />
         </div>
         <div
           className="tp-bp-hero-shape d-none d-lg-block wow tpfadeRight"
@@ -43,8 +45,8 @@ const HeroArea = () => {
           data-wow-delay=".6s"
         >
           <img
-            src="/assets/img/hero/hero-shape-6.1.png"
-            alt="Background Hero"
+            src={ background_image_path }
+            alt="Background Hero Image"
           />
         </div>
         <div className="container">
@@ -56,14 +58,14 @@ const HeroArea = () => {
                   data-wow-duration=".5s"
                   data-wow-delay=".8s"
                 >
-                  {title}
+                  {header_title}
                 </h3>
                 <p
                   className="wow tpfadeUp"
                   data-wow-duration=".7s"
                   data-wow-delay=".9s"
                 >
-                  {sm_text}
+                  {header_desc}
                 </p>
                 <div
                   className="tp-hero-three-button-box d-flex align-items-center wow tpfadeUp"
@@ -87,7 +89,7 @@ const HeroArea = () => {
                 </div>
                 <div className="tp-hero-social pb-30 d-xxl-none d-xl-block">
                   <div className="tp-hero-social bp-hero-social bs-xl-hero-social">
-                    <HeroSocials hide_title={true} />
+                    <HeroSocialLinks hide_title={true} />
                   </div>
                 </div>
               </div>
@@ -99,7 +101,11 @@ const HeroArea = () => {
                   data-wow-duration=".9s"
                   data-wow-delay="1s"
                 >
-                  <img className="z-index-1" src={hero_img} alt="Hero Image" />
+                  <img
+                    className="z-index-1"
+                    src={image_path}
+                    alt="Hero Image"
+                  />
                 </div>
               </div>
             </div>

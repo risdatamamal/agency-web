@@ -1,6 +1,7 @@
 import Link from "next/link";
 import React, { useState } from "react";
 import menu_data from "../../../layout/headers/menu-data";
+import Image from "next/image";
 
 const sidebar_contents = {
   title: (
@@ -33,7 +34,14 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
         <div className={`tpoffcanvas ${isOpen ? "opened" : ""}`}>
           <div className="tpoffcanvas__logo">
             <Link href="/" legacyBehavior>
-              <img src="/assets/img/logo/logo-white.png" alt="" />
+              {/* <img src="/assets/img/logo/logo-white.png" alt="" /> */}
+              <Image
+                src={`/assets/img/logo/logo-jp.png`}
+                alt="Logo"
+                width={80}
+                height={80}
+                style={{ borderRadius: "10%" }}
+              />
             </Link>
           </div>
           <div
@@ -91,6 +99,7 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
               </ul>
             </div>
           </div>
+          <hr />
           <div className="tpoffcanvas__contact">
             <span>Contact us</span>
             <ul>
@@ -101,21 +110,21 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
                   rel="noreferrer"
                   target="_blank"
                 >
-                  Melbone st, Australia, Ny 12099
+                  Jakarta, Indonesia, SCBD
                 </a>
               </li>
               <li>
                 <i className="fas fa-star"></i>
-                <a href="tel:8180012345678">+81 800 123 456 78</a>
+                <a href="tel:6280012345678">+62 800 123 456 78</a>
               </li>
               <li>
                 <i className="fas fa-star"></i>
-                <a href="mailto:Collaxmail@gmail.com">Collaxmail@gmail.com</a>
+                <a href="mailto:javaprojects.id@gmail.com">Javaprojects.id@gmail.com</a>
               </li>
             </ul>
           </div>
           <div className="tpoffcanvas__input d-none d-sm-block">
-            <p>Get UPdate</p>
+            <p>Get Update</p>
             <form className="p-relative" action="#">
               <input type="text" placeholder="Enter mail" />
               <button type="submit">
@@ -123,14 +132,14 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
               </button>
             </form>
           </div>
-          <div className="tpoffcanvas__instagram d-none d-sm-block">
-            <p>Check Instagram POst</p>
+          <div className="tpoffcanvas__instagram d-sm-block">
+            <p>Check Instagram Post</p>
             <div className="tp-insta">
               <div className="row">
                 {inst_imgs.map((img, i) => (
                   <div key={i} className="col-3 col-sm-3">
                     <a href="#">
-                      <img src={img} alt="" />
+                      <img src={img} alt="Instagram Post" />
                     </a>
                   </div>
                 ))}

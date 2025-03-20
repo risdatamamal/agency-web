@@ -15,7 +15,7 @@ const Products = () => {
   return (
     <Wrapper>
       <Header />
-      <Breadcrumb title={'Collax Product'} />
+      <Breadcrumb title={'Javaprojects Product'} />
       <ProductsArea/>
       <Footer />
     </Wrapper>

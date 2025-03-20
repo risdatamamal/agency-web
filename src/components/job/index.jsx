@@ -15,7 +15,7 @@ const Job = () => {
   return (
     <Wrapper>
       <Header />
-      <Breadcrumb title={'Collax Job List'} />
+      <Breadcrumb title={'Javaprojects Job List'} />
       <JobArea/>
       <Cta/>
       <Footer />

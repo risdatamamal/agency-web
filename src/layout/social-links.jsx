@@ -6,8 +6,7 @@ export const HeroSocialLinks = ({ hide_title = false }) => {
 
   return (
     <>
-      {socialLinks
-        .filter((l) => l.is_active)
+      {(hide_title ? socialLinks.sort((a, b) => a.order - b.order).filter((l) => l.is_active) : socialLinks.sort((a, b) => a.order - b.order).filter((l) => l.is_active).slice(0, 3))
         .map((l, i) => (
           <a
             key={i}
@@ -29,6 +28,7 @@ export const SocialLinks = () => {
   return (
     <>
       {socialLinks
+        .sort((a, b) => a.order - b.order)
         .filter((l) => l.is_active)
         .map((l, i) => (
           <a key={i} href={l.link} target={l.target ? l.target : ""}>

@@ -97,7 +97,7 @@ const Header = () => {
       </header>
 
       {/* <!-- mobile-menu-area --> */}
-      <MobileMenu logo={"logo-blue.png"} transparent={false} />
+      <MobileMenu logo={"logo-jp.png"} transparent={false} />
       {/* <!-- mobile-menu-area-end --> */}
     </React.Fragment>
   );

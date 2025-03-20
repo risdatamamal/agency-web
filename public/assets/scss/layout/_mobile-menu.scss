@@ -42,8 +42,8 @@
 					border-color: initial;
 					right: 16px;
 					top: 50%;
-					-webkit-transform: rotate(-45deg) translateY(-50%);
-					transform: rotate(-45deg) translateY(-50%);
+					-webkit-transform: rotate(-135deg) translateY(-50%);
+					transform: rotate(-135deg) translateY(-50%);
 					-webkit-transform-origin: top;
 					transform-origin: top;
 					transition: all 0.3s ease-out;
@@ -99,11 +99,11 @@
 		}
 
 		li.has-droupdown.active{
-			> a{
+			> a,button{
 				color: #2b4eff;
 				&:after{
-					-webkit-transform: rotate(-135deg) translateY(-50%);
-					transform: rotate(-135deg) translateY(-50%);
+					-webkit-transform: rotate(-315deg) translateY(-50%);
+					transform: rotate(-315deg) translateY(-50%);
 				}
 			}
 			ul.sub-menu.active{

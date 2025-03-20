@@ -47,7 +47,7 @@ const Index = () => {
       {brand_images.map((brand, i) => (
         <SwiperSlide key={i}>
           <div className="tp-brand-icon text-center">
-            <img src={brand} alt="" />
+            <img src={brand} alt="Brand Image" />
           </div>
         </SwiperSlide>
       ))}

@@ -9,7 +9,7 @@ const about_contents = {
       <path d="M-0.000488281 0L247 12H-0.000488281V0Z" fill="#FFDC60" />
     </svg> </span> value</>,
   sm_desc: 'By understanding the client,s condition and leveraging our experience and knowledge. we support reform by recommending the most appropriate methods and resources.',
-  btn_text: 'About Collax'
+  btn_text: 'About Javaprojects'
 }
 const { about_img, btn_text, sm_desc, subtitle, title } = about_contents;
 

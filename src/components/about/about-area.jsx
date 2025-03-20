@@ -6,7 +6,7 @@ const contents = {
   title:'Building software for world changers',
   video_title:'See Demo Video',
   video_id:'8D6b3McyhhU',
-  right_text_1:"Collax builds digital products that let people do things differently. Share your challenge with our team, and we’ll work with you to deliver a revolutionary digital product. Our clients have changed the way people do banking, listen to music.",
+  right_text_1:"Javaprojects builds digital products that let people do things differently. Share your challenge with our team, and we’ll work with you to deliver a revolutionary digital product. Our clients have changed the way people do banking, listen to music.",
   right_text_2:"learn languages, and rent bikes. Their products have been featured in TechCrunch, Business Insider, and Product Hunt.",
   client_icon:'/assets/img/about/testi-7.png',
   client_name:'Wiktor Schmidt',

@@ -23,7 +23,7 @@ function FeatureItem({ title, subtitle, color }) {
 
 const contents = {
   title: 'Creating world class experiences',
-  sm_desc_1: "Collax builds digital products that let people do things differently. Share your challenge with our team, and we’ll work with you to deliver a revolutionary digital product. Our clients have changed the way people do banking, listen to music.",
+  sm_desc_1: "Javaprojects builds digital products that let people do things differently. Share your challenge with our team, and we’ll work with you to deliver a revolutionary digital product. Our clients have changed the way people do banking, listen to music.",
   sm_desc_2: "learn languages, and rent bikes. Their products have been featured in TechCrunch, Business Insider, and Product Hunt"
 }
 const { title, sm_desc_1, sm_desc_2 } = contents;

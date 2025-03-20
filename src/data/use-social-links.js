@@ -21,7 +21,6 @@ const useSocialLinks = () => {
           ...doc.data(),
         }));
 
-        console.log("Fetched data:", data);
         setSocialLinks(data);
       } catch (error) {
         console.error("Error fetching Firestore data:", error);

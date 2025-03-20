@@ -5,6 +5,15 @@ import { HeroSocialLinks } from "../../layout/social-links";
 import { HighlightSix } from "../../svg";
 import VideoModal from "../common/modals/modal-video";
 
+export async function getServerSideProps() {
+  const res = await fetch("http://localhost:3001/headers"); // Panggil API dari backend Gin
+  const json = await res.json();
+
+  console.log("fetch data: ", json.data);
+  return { props: { headers: json.data } };
+  
+}
+
 const hero_contents = {
   header_title: (
     <>
@@ -28,8 +37,7 @@ const hero_contents = {
   background_image_path: "/assets/img/hero/hero-shape-6.1.png",
 };
 
-const { background_image_path, image_path, header_desc, header_title, video_id, video_title } =
-  hero_contents;
+const { background_image_path, image_path, header_desc, header_title, video_id, video_title } = hero_contents;
 
 const HeroArea = () => {
   const { isVideoOpen, setIsVideoOpen } = useModal();
@@ -44,10 +52,7 @@ const HeroArea = () => {
           data-wow-duration=".3s"
           data-wow-delay=".6s"
         >
-          <img
-            src={ background_image_path }
-            alt="Background Hero Image"
-          />
+          <img src={background_image_path} alt="Background Hero Image" />
         </div>
         <div className="container">
           <div className="row">

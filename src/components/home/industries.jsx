@@ -1,5 +1,28 @@
 import React from 'react';
 
+
+const IndustryItem = ({ duration, delay, number, title }) => {
+  return (
+    <a href="#">
+      <div
+        className="tpindustri wow tpfadeUp"
+        data-wow-duration={duration}
+        data-wow-delay={delay}
+      >
+        <div className="tpindustri__content">
+          <h3
+            className={`tp-industri-title ${
+              number ? `tp-ind-color-${number}` : ""
+            }`}
+          >
+            {title}
+          </h3>
+        </div>
+      </div>
+    </a>
+  );
+};
+
 const Industries = () => {
   return (
     <div className="tp-industri-area pb-130 p-relative">
@@ -32,16 +55,3 @@ const Industries = () => {
 };
 
 export default Industries;
-
-
-const IndustryItem = ({ duration, delay, number, title }) => {
-  return (
-    <a href="#">
-      <div className="tpindustri wow tpfadeUp" data-wow-duration={duration} data-wow-delay={delay}>
-        <div className="tpindustri__content">
-          <h3 className={`tp-industri-title ${number ? `tp-ind-color-${number}` : ''}`}>{title}</h3>
-        </div>
-      </div>
-    </a>
-  )
-}

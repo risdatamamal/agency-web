@@ -4,7 +4,7 @@ import { services_data } from '../../data';
 
 const services_contents = {
   shapes: ['bp-chose-6.1.png', 'hero-shape-5.1.png'],
-  subtitle: 'Why Choose us',
+  subtitle: 'Why choose us',
   title: 'Excellent it solution service and unlimited support for you business',
   services: services_data.filter(ser => ser.home_6),
 }

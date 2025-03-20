@@ -75,7 +75,7 @@ const JobDetailsArea = ({item}) => {
                   </ul>
                 </div>
                 <div className="jobdetails__title">
-                  <h4 className="job-title pb-15">All About Collax </h4>
+                  <h4 className="job-title pb-15">All About Javaprojects </h4>
                 </div>
                 <div className="jobdetails__paragraph">
                   <p>Our mission at Netguru is to help entrepreneurs and innovators shape the world through

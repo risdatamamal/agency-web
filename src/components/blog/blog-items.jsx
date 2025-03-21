@@ -52,7 +52,7 @@ const BlogItems = ({ itemsPerPage, items }) => {
             >
               {!slider && !video && (
                 <div className="postbox__thumb w-img">
-                  <Link href={`/blog-details/${id}`} legacyBehavior>
+                  <Link href={`/blog/details/${id}`} legacyBehavior>
                     <img src={img} alt="" />
                   </Link>
                 </div>
@@ -86,7 +86,7 @@ const BlogItems = ({ itemsPerPage, items }) => {
               )}
               {video && (
                 <div className="postbox__thumb postbox__video w-img p-relative">
-                  <Link href={`/blog-details/${id}`} legacyBehavior>
+                  <Link href={`/blog/details/${id}`} legacyBehavior>
                     <img src={img} alt="" />
                   </Link>
                   <button
@@ -123,7 +123,7 @@ const BlogItems = ({ itemsPerPage, items }) => {
                   </span>
                 </div>
                 <h3 className="postbox__title">
-                  <Link href={`/blog-details/${id}`} legacyBehavior>
+                  <Link href={`/blog/details/${id}`} legacyBehavior>
                     <a>{title}</a>
                   </Link>
                 </h3>
@@ -131,7 +131,7 @@ const BlogItems = ({ itemsPerPage, items }) => {
                   <p>{short_desc}</p>
                 </div>
                 <div className="post__button">
-                  <Link href={`/blog-details/${id}`} legacyBehavior>
+                  <Link href={`/blog/details/${id}`} legacyBehavior>
                     <a className="tp-btn-yellow"> READ MORE</a>
                   </Link>
                 </div>

@@ -123,16 +123,16 @@ const BlogDetailsArea = ({ blog }) => {
                         <div className="col-xl-6 col-lg-12">
                           <div className="postbox__tag tagcloud">
                             <span>Tag</span>
-                            <Link href="/blog-details" legacyBehavior>
+                            <Link href="/blog/details" legacyBehavior>
                               <a>Business</a>
                             </Link>
-                            <Link href="/blog-details" legacyBehavior>
+                            <Link href="/blog/details" legacyBehavior>
                               <a>Design</a>
                             </Link>
-                            <Link href="/blog-details" legacyBehavior>
+                            <Link href="/blog/details" legacyBehavior>
                               <a>apps</a>
                             </Link>
-                            <Link href="/blog-details" legacyBehavior>
+                            <Link href="/blog/details" legacyBehavior>
                               <a>data</a>
                             </Link>
                           </div>

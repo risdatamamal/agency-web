@@ -1,46 +1,45 @@
 import Link from "next/link";
 import React from "react";
+import Image from "next/image";
 import useModal from "../../hooks/use-modal";
 import { HeroSocialLinks } from "../../layout/social-links";
 import { HighlightSix } from "../../svg";
 import VideoModal from "../common/modals/modal-video";
+import useHeaders from "../../data/use-headers";
 
-export async function getServerSideProps() {
-  const res = await fetch("http://localhost:3001/headers"); // Panggil API dari backend Gin
-  const json = await res.json();
+// export async function getServerSideProps() {
+//   const res = await fetch("http://localhost:3001/headers");
+//   const json = await res.json();
 
-  console.log("fetch data: ", json.data);
-  return { props: { headers: json.data } };
+//   console.log("fetch data: ", json.data);
+//   return { props: { headers: json.data } };
   
-}
+// }
+
 
 const hero_contents = {
   header_title: (
     <>
-      Providing unparalleled{" "}
+      {/* Providing unparalleled
       <span className="tp-highlight">
-        {" "}
-        <HighlightSix /> <i>IT business solution</i>
-      </span>{" "}
-      to maximum satisfaction
+        <HighlightSix /> <i>IT business solution to</i>
+      </span>
+      maximum satisfaction */}
+      Providing superior
+      <span className="tp-highlight">
+        <HighlightSix /> <i>IT business solution to</i>
+      </span>
+      maximum satisfaction
     </>
   ),
-  header_desc: (
-    <>
-      At collax we specialize in designing, building, shipping and scaling{" "}
-      <br /> beautiful, usable products with blazing-fast efficiency
-    </>
-  ),
-  video_id: "AFHnVR1vb84",
-  video_title: "Behind the scenes",
-  image_path: "/assets/img/hero/hero-6.1.png",
-  background_image_path: "/assets/img/hero/hero-shape-6.1.png",
 };
 
-const { background_image_path, image_path, header_desc, header_title, video_id, video_title } = hero_contents;
+const { header_title } = hero_contents;
 
 const HeroArea = () => {
+  const headers = useHeaders();
   const { isVideoOpen, setIsVideoOpen } = useModal();
+
   return (
     <React.Fragment>
       <div className="tp-hero-area tp-hero-border tp-bp-hero-space p-relative grey-bg fix">
@@ -52,7 +51,7 @@ const HeroArea = () => {
           data-wow-duration=".3s"
           data-wow-delay=".6s"
         >
-          <img src={background_image_path} alt="Background Hero Image" />
+          <Image src={headers.background_image_path} alt="Background Hero Image" width={650} height={970} />
         </div>
         <div className="container">
           <div className="row">
@@ -70,7 +69,7 @@ const HeroArea = () => {
                   data-wow-duration=".7s"
                   data-wow-delay=".9s"
                 >
-                  {header_desc}
+                  {headers.header_desc}
                 </p>
                 <div
                   className="tp-hero-three-button-box d-flex align-items-center wow tpfadeUp"
@@ -89,7 +88,7 @@ const HeroArea = () => {
                     <button className="popup-video">
                       <i className="far fa-play"></i>
                     </button>
-                    <span>{video_title}</span>
+                    <span>{headers.video_title}</span>
                   </div>
                 </div>
                 <div className="tp-hero-social pb-30 d-xxl-none d-xl-block">
@@ -108,8 +107,10 @@ const HeroArea = () => {
                 >
                   <img
                     className="z-index-1"
-                    src={image_path}
+                    src={headers.image_path}
                     alt="Hero Image"
+                    // width={870}
+                    // height={490}
                   />
                 </div>
               </div>
@@ -122,7 +123,7 @@ const HeroArea = () => {
       <VideoModal
         isVideoOpen={isVideoOpen}
         setIsVideoOpen={setIsVideoOpen}
-        videoId={video_id}
+        videoId={headers.video_id}
       />
       {/* video modal end */}
     </React.Fragment>

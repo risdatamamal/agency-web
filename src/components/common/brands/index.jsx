@@ -9,7 +9,6 @@ const brand_images = [
   '/assets/img/brand/brand-4.png',
   '/assets/img/brand/brand-5.png',
   '/assets/img/brand/brand-6.png',
-  '/assets/img/brand/brand-6.png',
 ]
 
 const Index = () => {

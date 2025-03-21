@@ -23,6 +23,7 @@ const Header = () => {
   useEffect(() => {
     dispatch(get_user());
   }, [dispatch]);
+  
   return (
     <React.Fragment>
       <header className="d-none d-lg-block">

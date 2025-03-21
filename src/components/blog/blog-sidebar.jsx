@@ -49,13 +49,14 @@ const BlogSidebar = () => {
         <div className="sidebar__widget-content">
           <ul>
             {widget_contents.map((widget, i) => (
-              <li key={i}>
-                <Link href="/blog" legacyBehavior>
-                  <>
-                    <a>{widget.title}</a>
-                    <span>{widget.count}</span>
-                  </>
+              <li
+                key={i}
+                className="widget-item d-flex justify-content-between align-items-center"
+              >
+                <Link href="/blogs/${categories}" legacyBehavior>
+                  <a>{widget.title}</a>
                 </Link>
+                <span>{widget.count}</span>
               </li>
             ))}
           </ul>
@@ -72,7 +73,7 @@ const BlogSidebar = () => {
                 className="rc__post mb-20 d-flex align-items-center"
               >
                 <div className="rc__post-thumb mr-20">
-                  <Link href={`/blog-details/${post.id}`} legacyBehavior>
+                  <Link href={`/blog/details/${post.id}`} legacyBehavior>
                     <a>
                       <img src={post.img} alt="Image Blog" />
                     </a>
@@ -83,7 +84,7 @@ const BlogSidebar = () => {
                     <span>{post.date}</span>
                   </div>
                   <h3 className="rc__post-title">
-                    <Link href={`/blog-details/${post.id}`} legacyBehavior>
+                    <Link href={`/blog/details/${post.id}`} legacyBehavior>
                       <a>{post.title.substring(0, 35)}...</a>
                     </Link>
                   </h3>
@@ -98,7 +99,7 @@ const BlogSidebar = () => {
         <div className="sidebar__widget-content">
           <div className="tagcloud">
             {tags.map((tag, i) => (
-              <Link key={i} href="/blog" legacyBehavior>
+              <Link key={i} href="/blogs" legacyBehavior>
                 <a>{tag}</a>
               </Link>
             ))}

@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { collection, getDocs } from "firebase/firestore";
-import firestoreInitialization from "../firebase/firestore.init";
+import firestoreInitialization from "../../firebase/firestore.init";
 
 const db = firestoreInitialization();
 

@@ -1,16 +1,17 @@
 import { useState, useEffect } from "react";
 import { collection, getDocs } from "firebase/firestore";
-import firestoreInitialization from "../firebase/firestore.init";
+import firestoreInitialization from "../../firebase/firestore.init";
 
 const db = firestoreInitialization();
 
-const useHeaders = () => {
-  const [headers, setHeaders] = useState([]);
+const useMenus = () => {
+  const [menus, setMenus] = useState([]);
+  // const [sub_menus, setSubMenus] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const querySnapshot = await getDocs(collection(db, "headers"));
+        const querySnapshot = await getDocs(collection(db, "menus"));
 
         if (querySnapshot.empty) {
           console.log("No data found in Firestore.");
@@ -21,16 +22,18 @@ const useHeaders = () => {
           ...doc.data(),
         }));
 
-        setHeaders(data[0]);
+        setMenus(data);
+        // const extractedSubMenus = data.flatMap((menu) => menu.sub_menus || []);
+        // setSubMenus(extractedSubMenus);
       } catch (error) {
         console.error("Error fetching Firestore data:", error);
       }
     };
-
     fetchData();
   }, []);
-
-  return headers;
+  
+  return menus;
+  // return { menus, sub_menus };
 };
 
-export default useHeaders;
+export default useMenus;

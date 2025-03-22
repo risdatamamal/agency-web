@@ -5,40 +5,21 @@ import useModal from "../../hooks/use-modal";
 import { HeroSocialLinks } from "../../layout/social-links";
 import { HighlightSix } from "../../svg";
 import VideoModal from "../common/modals/modal-video";
-import useHeaders from "../../data/use-headers";
-
-// export async function getServerSideProps() {
-//   const res = await fetch("http://localhost:3001/headers");
-//   const json = await res.json();
-
-//   console.log("fetch data: ", json.data);
-//   return { props: { headers: json.data } };
-  
-// }
-
-
-const hero_contents = {
-  header_title: (
-    <>
-      {/* Providing unparalleled
-      <span className="tp-highlight">
-        <HighlightSix /> <i>IT business solution to</i>
-      </span>
-      maximum satisfaction */}
-      Providing superior
-      <span className="tp-highlight">
-        <HighlightSix /> <i>IT business solution to</i>
-      </span>
-      maximum satisfaction
-    </>
-  ),
-};
-
-const { header_title } = hero_contents;
+import useHeaders from "../../data/api/use-headers";
 
 const HeroArea = () => {
   const headers = useHeaders();
   const { isVideoOpen, setIsVideoOpen } = useModal();
+
+  if (!headers) {
+    return <p>Loading...</p>;
+  }
+
+  const header_title = headers.header_title || "";
+  // Tentukan bagian yang ingin di-highlight
+  const highlightedText = "IT business solution";
+  // Pisahkan teks sebelum, target, dan sesudahnya
+  const parts = header_title ? header_title.split(highlightedText) : ["", "", ""];
 
   return (
     <React.Fragment>
@@ -51,7 +32,19 @@ const HeroArea = () => {
           data-wow-duration=".3s"
           data-wow-delay=".6s"
         >
-          <Image src={headers.background_image_path} alt="Background Hero Image" width={650} height={970} />
+          {headers.background_image_path ? (
+            <Image
+              src={headers.background_image_path}
+              alt="Background Hero Image"
+              width={650}
+              height={970}
+              priority={true}
+            />
+          ) : (
+            <div style={{ width: 650, height: 970, backgroundColor: "#ccc" }}>
+              Image not available
+            </div>
+          )}
         </div>
         <div className="container">
           <div className="row">
@@ -62,7 +55,11 @@ const HeroArea = () => {
                   data-wow-duration=".5s"
                   data-wow-delay=".8s"
                 >
-                  {header_title}
+                  {parts[0]}
+                  <span className="tp-highlight">
+                    <HighlightSix /> <i>{highlightedText}</i>
+                  </span>
+                  {parts[1]}
                 </h3>
                 <p
                   className="wow tpfadeUp"

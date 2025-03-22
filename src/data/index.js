@@ -1,15 +1,15 @@
-import portfolio_data from "./portfolio-data";
-import blog_data from "./blog-data";
-import services_data from "./services-data";
-import team_data from "./team-data";
-import productsData from "./products-data";
-import job_data from "./job-data";
+import portfolio_data from "./dummy/portfolio-data";
+import blog_data from "./dummy/blog-data";
+import services_data from "./dummy/services-data";
+import team_data from "./dummy/team-data";
+import products_data from "./dummy/products-data";
+import job_data from "./dummy/job-data";
 
 export {
   portfolio_data,
   blog_data,
   services_data,
   team_data,
-  productsData,
+  products_data,
   job_data,
-}
+};

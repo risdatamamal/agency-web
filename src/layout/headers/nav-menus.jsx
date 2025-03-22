@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React from "react";
 import menu_data from "./menu-data";
-import useMenus from "../../data/use-menus";
+import useMenus from "../../data/firestore/use-menus";
 
 const NavMenus = () => {
   const menus = useMenus();

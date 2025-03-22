@@ -1,5 +1,5 @@
 import React from "react";
-import useSocialLinks from "../data/use-social-links";
+import useSocialLinks from "../data/firestore/use-social-links";
 
 export const HeroSocialLinks = ({ hide_title = false }) => {
   const socialLinks = useSocialLinks();

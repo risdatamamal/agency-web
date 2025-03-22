@@ -1,8 +1,8 @@
 import React from 'react';
-import { productsData } from '../../data';
+import { products_data } from "../../data";
 import ProductsItem from './products-item';
 
-const product_items = productsData;
+const product_items = products_data;
 
 const ProductsArea = () => {
   return (

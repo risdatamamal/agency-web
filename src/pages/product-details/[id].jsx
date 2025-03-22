@@ -1,6 +1,6 @@
 import React from 'react';
 import SEO from '../../components/seo';
-import { productsData } from '../../data';
+import { products_data } from "../../data";
 import { Wrapper } from '../../layout';
 import ProductsDetailsMain from '../../components/product-details';
 import { useRouter } from 'next/router';
@@ -9,7 +9,9 @@ import { useRouter } from 'next/router';
 const ProductDynamicDetails = () => {
   const router = useRouter();
   const { id } = router.query;
-  const product_item = productsData.find(item => Number(item.id) === Number(id))
+  const product_item = products_data.find(
+    (item) => Number(item.id) === Number(id)
+  );
   return (
     <Wrapper>
       <SEO pageTitle={'Product Details'} />

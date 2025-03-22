@@ -1,5 +1,5 @@
 import React from 'react';
-import blog_data from '../../data/blog-data';
+import blog_data from '../../data/dummy/blog-data';
 import BlogSidebar from './blog-sidebar';
 import BlogItems from './blog-items';
 

@@ -5,7 +5,7 @@ import useModal from "../../hooks/use-modal";
 import { HeroSocialLinks } from "../../layout/social-links";
 import { HighlightSix } from "../../svg";
 import VideoModal from "../common/modals/modal-video";
-import useHeaders from "../../data/api/use-headers";
+import useHeaders from "../../data/firestore/use-headers";
 
 const HeroArea = () => {
   const headers = useHeaders();
